@@ -1,5 +1,23 @@
+import './bootstrap';
+
+import Alpine from 'alpinejs';
+import focus from '@alpinejs/focus';
+
 import {createApp} from 'vue'
 
-import Welcome from './components/Welcome.vue'
+const app = createApp({
 
-createApp(Welcome).mount("#app")
+})
+
+import Home from '@/components/front/Home.vue'
+
+app.component('Home', Home)
+
+app.mount("#app")
+
+
+window.Alpine = Alpine;
+
+Alpine.plugin(focus);
+
+Alpine.start();
