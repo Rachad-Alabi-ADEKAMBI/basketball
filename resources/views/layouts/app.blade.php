@@ -17,6 +17,18 @@
         integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     <link rel="stylesheet" href=" {{ asset('/css/main.css') }} " />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+
+    <link rel="icon" type="image/x-icon" href="{{ asset('/images/logos/ico.ico')}}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <meta name='description' content='' />
+
+    <meta name="robots" content='index, follow'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
 
 
     <!-- Styles -->
@@ -44,6 +56,25 @@
                 {{ $slot }}
             </div>
         </main>
+
+        <!--page footer-->
+        <hr>
+        <footer class="footer">
+            <div class="footer__menu">
+                <ul>
+                    <li><a href="">Home</a></li>
+                    <li><a href="">Clubs</a></li>
+                    <li><a href="">Shop</a></li>
+                    <li><a href="">Fans tokens</a></li>
+                    <li><a href="">Cryptos news</a></li>
+                    <li><a href="">Policy</a></li>
+                </ul>
+            </div>
+
+            <div class="footer__infos">
+                © Cruspher.com | All rights reserved
+            </div>
+        </footer>
     </div>
 
     @stack('modals')

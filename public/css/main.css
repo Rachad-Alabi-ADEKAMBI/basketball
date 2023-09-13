@@ -6,6 +6,11 @@
   color: black;
 }
 
+.subtitle {
+  font-size: 2em;
+  font-weight: bold;
+}
+
 html, body {
   font-family: montserrat, sans-serif;
   padding: 0;
@@ -46,4 +51,56 @@ html, body {
 }
 .app .hero__text .btn {
   margin: 30px auto;
+}
+.app .clubs {
+  text-align: center;
+  margin: 15px auto;
+}
+.app .clubs ul {
+  width: 100%;
+}
+.app .clubs ul li {
+  display: inline;
+}
+.app .clubs ul li img {
+  width: 150px;
+  height: auto;
+  margin: auto;
+}
+.app .contact {
+  width: 90%;
+  margin: auto auto 30px auto;
+  text-align: center;
+}
+.app .contact__items {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.app .contact__items__item {
+  width: 340px;
+  height: 150px;
+  background-color: #0D0D0D;
+  border-radius: 5px;
+  text-align: center;
+  margin: auto;
+  padding-top: 30px;
+}
+.app .contact__items__item .icone {
+  color: #FDE635;
+}
+.app .contact__items__item .infos {
+  color: white;
+}
+.app .contact__items__item .infos span {
+  color: #FDE635;
+  font-size: 1.5em;
+}
+
+.footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }/*# sourceMappingURL=main.css.map */

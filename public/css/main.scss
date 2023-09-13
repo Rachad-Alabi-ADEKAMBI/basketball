@@ -3,6 +3,7 @@
 $primary: #FDE635;
 $white: white;
 $black: black;
+$blue-dark: #0D0D0D;
 
 @mixin flex($flex-direction: row){
     display: flex;
@@ -17,6 +18,12 @@ $black: black;
     font-weight: bold;
     color: $black;
 }
+
+.subtitle{
+    font-size: 2em;
+    font-weight: bold;
+}
+
 html, body{
     font-family: montserrat, sans-serif;
     padding: 0;
@@ -72,5 +79,68 @@ html, body{
 
         }
 
+    }
+
+    .clubs{
+        text-align: center;
+        margin: 15px auto;
+
+        ul{
+            width: 100%;
+            li{
+                display: inline;
+                img{
+                    width: 150px;
+                    height: auto;
+                    margin: auto;
+                }
+            }
+        }
+    }
+
+    .contact{
+        width: 90%;
+        margin: auto auto 30px auto;
+        text-align: center;
+
+        &__items{
+            @include flex();
+            &__item{
+                width: 340px;
+                height: 150px;
+                background-color: $blue-dark;
+                border-radius: 5px;
+                text-align: center;
+                margin: auto;
+                padding-top: 30px;
+
+                .icone{
+                    color: $primary;
+                }
+
+                .infos{
+                    color: $white;
+                    span{
+                        color: $primary;
+                        font-size: 1.5em;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.footer{
+    @include flex();
+    background-color: $blue-dark;
+    padding: 5px;
+
+    &__menu{
+        ul{
+            display: inline;
+            li{
+                display: inline;
+            }
+        }
     }
 }
