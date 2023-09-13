@@ -1,0 +1,76 @@
+@import url('http://fonts.cdnfonts.com/css/montserrat');
+
+$primary: #FDE635;
+$white: white;
+$black: black;
+
+@mixin flex($flex-direction: row){
+    display: flex;
+    flex-direction: $flex-direction;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.btn-primary{
+    background-color: $primary;
+    border: 1px $primary solid;
+    font-weight: bold;
+    color: $black;
+}
+html, body{
+    font-family: montserrat, sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 1.1em;
+}
+
+.header{
+    .logo{
+        width: 150px;
+        height: auto;
+    }
+    }
+
+.app{
+    .hero{
+        height: 80vh;
+        width: 100%;
+        background-image: linear-gradient(to bottom, rgba(209, 211, 96, 0.52), rgba(7, 75, 1, 0.73)),
+        url('/images/hero.jpg');
+        position: relative;
+
+        &__text{
+            position: absolute;
+            margin: 80px auto auto 50%;
+            color: $white;
+            display: block;
+
+            p{
+             //   color: #817b28;
+                font-size: 1.5em;
+            }
+
+            h1{
+                color: $primary;
+                font-size: 3em;
+                font-weight: bold;
+                margin: 50px auto;
+            }
+
+            span{
+                font-size: 1.2em;
+                margin: 40px auto;
+            }
+
+            .btn{
+                margin: 30px auto;
+            }
+
+
+
+
+        }
+
+    }
+}

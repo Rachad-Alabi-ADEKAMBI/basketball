@@ -1,3 +1,4 @@
 <x-app-layout>
-    <Home />ghglk
+    <Home />
+
 </x-app-layout>
