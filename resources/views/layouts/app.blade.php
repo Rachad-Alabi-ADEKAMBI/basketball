@@ -8,10 +8,6 @@
 
     <title>{{ config('app.name', 'Laravel') }}</title>
 
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.bunny.net">
-    <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
-
     <!-- Scripts -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
@@ -60,19 +56,37 @@
         <!--page footer-->
         <hr>
         <footer class="footer">
+            <div class="footer__infos">
+                <div class="logo">
+                    <img src="{{ asset('images/logos/cruspher-text.png')}}" alt="">
+                </div>
+                <span>
+                    Unification of fans from different continents
+                    and regions, based on basketball interactive.
+                </span>
+            </div>
             <div class="footer__menu">
+                <h4>
+                    Links
+                </h4>
                 <ul>
-                    <li><a href="">Home</a></li>
                     <li><a href="">Clubs</a></li>
                     <li><a href="">Shop</a></li>
                     <li><a href="">Fans tokens</a></li>
                     <li><a href="">Cryptos news</a></li>
-                    <li><a href="">Policy</a></li>
                 </ul>
             </div>
 
-            <div class="footer__infos">
-                © Cruspher.com | All rights reserved
+            <div class="footer__menu">
+                <h4>
+                    About us
+                </h4>
+                <ul>
+                    <li><a href="">Register</a></li>
+                    <li><a href="">Partnership</a></li>
+                    <li><a href="">Terms of use</a></li>
+                    <li><a href="">Privacy policy</a></li>
+                </ul>
             </div>
         </footer>
     </div>

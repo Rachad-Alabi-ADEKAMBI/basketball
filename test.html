@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="">
+        uhuho
+    </div>
+    <script>
+        var myHeaders = new Headers();
+myHeaders.append("x-rapidapi-key", "71d95ba09f4094fa6f5f291f089cb27b");
+myHeaders.append("x-rapidapi-host", "v1.basketball.api-sports.io");
+
+var requestOptions = {
+  method: 'GET',
+  headers: myHeaders,
+  redirect: 'follow'
+};
+
+fetch("https://v1.basketball.api-sports.io/games?date=2023-09-14", requestOptions)
+  .then(response => response.text())
+  .then(result => console.log(result))
+  .catch(error => console.log('error', error));
+
+    </script>
+</body>
+</html>

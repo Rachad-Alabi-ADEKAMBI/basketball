@@ -1,6 +1,6 @@
-@import url('http://fonts.cdnfonts.com/css/montserrat');
 
 $primary: #FDE635;
+$secondary: #7E57C2;
 $white: white;
 $black: black;
 $blue-dark: #0D0D0D;
@@ -15,8 +15,17 @@ $blue-dark: #0D0D0D;
 .btn-primary{
     background-color: $primary;
     border: 1px $primary solid;
-    font-weight: bold;
     color: $black;
+}
+
+.btn-secondary{
+    background-color: $secondary;
+    border: 1px $secondary solid;
+    color: $black;
+}
+
+.btn-primary:hover{
+    background-color: $secondary;
 }
 
 .subtitle{
@@ -128,18 +137,68 @@ html, body{
             }
         }
     }
+
+    .dashboard{
+        display:  block;
+
+
+        &__top{
+            text-align: center;
+            padding-top: 20px;
+
+            ul{
+                width: 50%;
+                margin: auto;
+                li{
+                    margin: 15px;
+                    display: inline
+                }
+            }
+        }
+
+        &__content{
+            min-height: 60vh;
+            height: 60vh;
+        }
+    }
 }
 
 .footer{
     @include flex();
     background-color: $blue-dark;
     padding: 5px;
+    padding-top: 10px;
+
+    &__infos{
+        flex: 1;
+
+        span{
+            color: $white;
+            width: 70%;
+            text-align: left;
+            margin: auto 0;
+        }
+    }
 
     &__menu{
+        flex: 1;
+
+        h4{
+            color: $primary;
+            font-size: 1.6em;
+        }
         ul{
-            display: inline;
             li{
-                display: inline;
+                display: block;
+
+                a{
+                    color:$white;
+                    cursor: pointer;
+                }
+
+                a:hover{
+                    font-weight: bold;
+                }
             }
         }
     }

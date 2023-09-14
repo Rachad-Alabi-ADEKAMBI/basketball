@@ -10,8 +10,10 @@ const app = createApp({
 })
 
 import Home from '@/components/front/Home.vue'
+import Dashboard from '@/components/back/Dashboard.vue'
 
 app.component('Home', Home)
+app.component('Dashboard', Dashboard)
 
 app.mount("#app")
 

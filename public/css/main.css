@@ -1,9 +1,17 @@
-@import url("http://fonts.cdnfonts.com/css/montserrat");
 .btn-primary {
   background-color: #FDE635;
   border: 1px #FDE635 solid;
-  font-weight: bold;
   color: black;
+}
+
+.btn-secondary {
+  background-color: #7E57C2;
+  border: 1px #7E57C2 solid;
+  color: black;
+}
+
+.btn-primary:hover {
+  background-color: #7E57C2;
 }
 
 .subtitle {
@@ -97,10 +105,58 @@ html, body {
   color: #FDE635;
   font-size: 1.5em;
 }
+.app .dashboard {
+  display: block;
+}
+.app .dashboard__top {
+  text-align: center;
+  padding-top: 20px;
+}
+.app .dashboard__top ul {
+  width: 50%;
+  margin: auto;
+}
+.app .dashboard__top ul li {
+  margin: 15px;
+  display: inline;
+}
+.app .dashboard__content {
+  min-height: 60vh;
+  height: 60vh;
+}
 
 .footer {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   flex-wrap: wrap;
+  background-color: #0D0D0D;
+  padding: 5px;
+  padding-top: 10px;
+}
+.footer__infos {
+  flex: 1;
+}
+.footer__infos span {
+  color: white;
+  width: 70%;
+  text-align: left;
+  margin: auto 0;
+}
+.footer__menu {
+  flex: 1;
+}
+.footer__menu h4 {
+  color: #FDE635;
+  font-size: 1.6em;
+}
+.footer__menu ul li {
+  display: block;
+}
+.footer__menu ul li a {
+  color: white;
+  cursor: pointer;
+}
+.footer__menu ul li a:hover {
+  font-weight: bold;
 }/*# sourceMappingURL=main.css.map */
