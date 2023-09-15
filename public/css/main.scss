@@ -31,6 +31,8 @@ $blue-dark: #0D0D0D;
 .subtitle{
     font-size: 2em;
     font-weight: bold;
+    margin: auto;
+    text-align: center;
 }
 
 html, body{
@@ -159,6 +161,99 @@ html, body{
         &__content{
             min-height: 60vh;
             height: 60vh;
+        }
+    }
+
+    .news{
+        display: block;
+
+        &__content{
+            @include flex();
+            width: 90%;
+            margin: auto;
+
+            .new{
+                border-radius: 15px;
+                background-color: $blue-dark;
+                display: block;
+                flex: 1;
+                margin: 10px;
+                color: $white;
+                padding: 30px;
+
+                h4{
+                    color: $primary;
+                    font-weight: bold;
+                }
+
+                &__image{
+                    img{
+                        border-radius: 10px;
+                    }
+                }
+
+                &__date{
+                    @include flex();
+
+                    .date{
+                        i{
+                            color: $white;
+                        }
+                    }
+
+                   .likes{
+                    .like{
+                        color: $primary;
+                        margin: 10px;
+                    }
+
+                    .dislike{
+                        color: $secondary;
+                    }
+                   }
+                }
+
+                &__link{
+                    color: $primary;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+
+    .partnership{
+        width: 80%;
+        @include flex();
+        border-radius: 30px;
+        background-color: $blue-dark;
+        margin: 40px auto;
+        padding-top: 30px;
+        padding-bottom: 20px;
+
+        &__image{
+            width: 170px;
+            height: 170px;
+            border-radius: 60px;
+            margin: 90px 30px auto 40px;
+        }
+
+        &__text{
+            flex: 1;
+            display: block;
+            color: $white;
+            margin: 20px auto;
+            padding-left: 30px;
+
+            h4{
+                color: $primary;
+                font-size: 2em;
+            }
+
+        }
+
+        .btn{
+            border-radius: 10px;
+            margin: 20px auto
         }
     }
 }

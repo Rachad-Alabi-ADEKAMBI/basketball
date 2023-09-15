@@ -17,6 +17,8 @@
 .subtitle {
   font-size: 2em;
   font-weight: bold;
+  margin: auto;
+  text-align: center;
 }
 
 html, body {
@@ -123,6 +125,86 @@ html, body {
 .app .dashboard__content {
   min-height: 60vh;
   height: 60vh;
+}
+.app .news {
+  display: block;
+}
+.app .news__content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 90%;
+  margin: auto;
+}
+.app .news__content .new {
+  border-radius: 15px;
+  background-color: #0D0D0D;
+  display: block;
+  flex: 1;
+  margin: 10px;
+  color: white;
+  padding: 30px;
+}
+.app .news__content .new h4 {
+  color: #FDE635;
+  font-weight: bold;
+}
+.app .news__content .new__image img {
+  border-radius: 10px;
+}
+.app .news__content .new__date {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.app .news__content .new__date .date i {
+  color: white;
+}
+.app .news__content .new__date .likes .like {
+  color: #FDE635;
+  margin: 10px;
+}
+.app .news__content .new__date .likes .dislike {
+  color: #7E57C2;
+}
+.app .news__content .new__link {
+  color: #FDE635;
+  cursor: pointer;
+}
+.app .partnership {
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  border-radius: 30px;
+  background-color: #0D0D0D;
+  margin: 40px auto;
+  padding-top: 30px;
+  padding-bottom: 20px;
+}
+.app .partnership__image {
+  width: 170px;
+  height: 170px;
+  border-radius: 60px;
+  margin: 90px 30px auto 40px;
+}
+.app .partnership__text {
+  flex: 1;
+  display: block;
+  color: white;
+  margin: 20px auto;
+  padding-left: 30px;
+}
+.app .partnership__text h4 {
+  color: #FDE635;
+  font-size: 2em;
+}
+.app .partnership .btn {
+  border-radius: 10px;
+  margin: 20px auto;
 }
 
 .footer {
