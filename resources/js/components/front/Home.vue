@@ -24,21 +24,103 @@
                 <div class="clubs">
                     <h2 class="subtitle">
                         Clubs
-                    </h2>
+                    </h2> <br>
 
                     <ul>
-                        <li>
-                            <img src="images/logos/cruspher-text.png" alt="">
-                        </li>
-
-                        <li>
-                            <img src="images/logos/cruspher-text.png" alt="">
-                        </li>
-
-                        <li>
-                            <img src="images/logos/cruspher-text.png" alt="">
+                        <li v-for="game in apiResult.response" :key="game.id">
+                            <p>{{ game.name   }}</p>
+                            <p>{{ game.type   }}</p>
                         </li>
                     </ul>
+                </div>
+
+                <div class="platform">
+                    <h2 class="subtitle">
+                            Digital platform CRUSPHER
+                    </h2>
+
+                    <div class="platform__content">
+                        <div class="platform__content__top">
+                            <div class="title" @click="displayBox1()" :style="title1">
+                                <p>Idea</p>
+                            </div>
+
+                             <div class="title" @click="displayBox2()" :style="title2">
+                                <p>The present</p>
+                            </div>
+
+                             <div class="title" @click="displayBox3()" :style="title3">
+                                <p>
+                                    The futur
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="platform__content__main">
+                            <div class="box box1" v-if="showBox1" >
+                                <div class="box__text">
+                                    <h4>
+                                        Unique Digital Product for
+                                         Basketball Fans
+                                    </h4>
+
+                                    <p>
+                                        product aimed at satisfying the needs of basketball fans. We have successfully merged real basketball events with an immersive virtual world, creating a platform that brings together basketball enthusiasts of different nationalities, regardless of their location. <br><br>
+                                        Our platform, Cruspher, not only provides the opportunity to access match statistics of your favorite basketball club at any time but also allows engaging in virtual betting on basketball games. It's a basketball gaming experience that helps fans generate new emotions and impressions without leaving their homes <br><br>
+                                        We understand the importance of match statistics for basketball fans. That's why Cruspher offers detailed match statistics and latest basketball news ensuring you're always up to date with the latest events and able to make informed decisions during the game and virtual betting.
+
+                                    </p>
+                                </div>
+
+                                <div class="box__image">
+                                        <img src="images/img6.jpg" alt="">
+                                </div>
+                            </div>
+
+                            <div class="box box2" v-if="showBox2">
+                                <div class="box__text">
+                                    <h4>
+                                        Technology Employed
+                                    </h4>
+
+                                    <p>
+                                        Currently, we harness cutting-edge and efficient
+                                        resources to construct web platforms, high-speed
+                                        databases,
+                                        next-generation frameworks, and more.
+                                    </p>
+                                </div>
+
+                                <div class="box__image">
+                                        <img src="images/img5.jpg" alt="">
+                                </div>
+                            </div>
+
+                            <div class="box box3" v-if="showBox3">
+                                <div class="box__text">
+                                    <h4>
+                                        Web Application
+                                    </h4>
+
+                                    <p>
+                                        In the near future, we aim to greatly expand the functional capabilities of our web application. These enhancements will include a streaming system employing the latest graphic capabilities, a system for clan events and tournaments, a unique football statistics data analysis system, and many other exciting updates.
+
+                                    </p>
+                                </div>
+
+                                <div class="box__text">
+                                    <h4>
+                                        Mobile Application
+                                    </h4>
+
+                                    <p>
+                                        Furthermore, we plan to develop mobile applications, which will enable our team to implement even more features and services to enhance the operation of our platform.
+
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="news">
@@ -88,9 +170,9 @@
                         </h4> <br>
 
                         <p>
-                            Our vision is to unite football fans from different countries to create the world's largest football platform with Cruspher technology. <br>
+                            Our vision is to unite basketball fans from different countries to create the world's largest basketball platform with Cruspher technology. <br>
 
-                                Every football club can benefit from a custom-designed football app featuring Cruspher technology, tailored to your team. The app incorporates interactive features, competitions, news updates, a fan forum, in-depth statistics, and much more, all of which serve to unite your club's fans. This enables the creation of an international platform for direct engagement with your fan base.»
+                                Every basketballs club can benefit from a custom-designed basketball app featuring Cruspher technology, tailored to your team. The app incorporates interactive features, competitions, news updates, a fan forum, in-depth statistics, and much more, all of which serve to unite your club's fans. This enables the creation of an international platform for direct engagement with your fan base.»
                         </p>
 
                         <button class="btn btn-primary" >
@@ -163,10 +245,30 @@ export default{
             }
 
         ],
+        showBox1: false,
+        showBox2: false,
+        showBox3: false,
+        title1: {
+
+      },
+      title2:{
+
+      },
+      title3:{
+
+      },
+      apiResult: {
+        get: '',
+        parameters: [],
+        errors: [],
+        results: 0,
+        response: '',
+      },
     }
 },
 mounted: function() {
    this.getGames();
+   this.displayBox1();
 },
 methods: {
     getGames() {
@@ -184,12 +286,49 @@ methods: {
         .then(response => response.json()) // Use response.json() to parse JSON data
         .then(result => {
             console.log(result)
-            this.details = result;
+            this.apiResult = result;
         })
         .catch(error => {
             console.log('error', error);
         });
-},
+    },
+    displayBox1(){
+        this.showBox1 = true;
+        this.showBox2 = false;
+        this.showBox3 = false;
+        this.title1.background = '#FDE635';
+        this.title1.color = 'black';
+
+        this.title2.background = '#22242b';
+        this.title2.color = 'white';
+        this.title3.background = '#22242b';
+        this.title3.color = 'white';
+
+    },
+    displayBox2(){
+        this.showBox1 = false;
+        this.showBox2 = true;
+        this.showBox3 = false;
+        this.title2.background = '#FDE635';
+        this.title2.color = 'black';
+
+        this.title1.background = '#22242b';
+        this.title1.color = 'white';
+        this.title3.background = '#22242b';
+        this.title3.color = 'white';
+    },
+    displayBox3(){
+        this.showBox1 = false;
+        this.showBox2 = false;
+        this.showBox3 = true;
+        this.title3.background = '#FDE635';
+        this.title3.color = 'black';
+
+        this.title1.background = '#22242b';
+        this.title1.color = 'white';
+        this.title2.background = '#22242b';
+        this.title2.color = 'white';
+    },
     getCurrentUserId() {
       return '{{ Auth::id() }}'; // Get the current user ID using the auth helper function
     },

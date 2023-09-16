@@ -3,7 +3,8 @@ $primary: #FDE635;
 $secondary: #7E57C2;
 $white: white;
 $black: black;
-$blue-dark: #0D0D0D;
+$blue-dark: #201919;
+$blue-light: #22242b;
 
 @mixin flex($flex-direction: row){
     display: flex;
@@ -219,6 +220,89 @@ html, body{
                 }
             }
         }
+    }
+
+    .platform{
+        display: block;
+        width: 90%;
+        height: auto;
+        border: 1px $blue-dark solid;
+        border-radius: 15px;
+        padding: 10px;
+        background-color: $blue-dark;
+        margin: 30px auto;
+
+        .subtitle{
+            color: $white;
+            margin: 15px auto;
+        }
+
+        &__content{
+           display: block;
+           margin: 15px auto;
+
+            &__top{
+                @include flex();
+                margin: 10px auto;
+                .title{
+                    color: $white;
+                    flex: 1;
+                    background-color: $blue-light;
+                    cursor: pointer;
+                    text-align: center;
+                    height: 60px;
+                    border-radius: 10px;
+                    display: table;
+
+                    p{
+                        vertical-align: middle;
+                        margin: 20px auto;
+                    }
+
+                }
+
+                .title:hover{
+                    background-color: $primary;
+                    color: $blue-dark;
+                    transition: 500ms ease-in-out;
+                    font-weight: bold;
+                }
+            }
+
+            &__main{
+                .box{
+                    @include flex();
+
+                    &__text{
+                        display: block;
+                         color: $white;
+                         flex: 1;
+                         text-align: left;
+                        padding-right: 15px;
+
+                        h4{
+                            font-size: 1.5em;
+                        }
+
+                        p{
+                            margin: 15px auto;
+                        }
+                    }
+
+                    &__image{
+                        flex: 1;
+
+                        img{
+                            width: 95%;
+                            height: auto;
+                            border-radius: 15px;
+                            margin: auto;
+                        }
+                    }
+                }
+            }
+        }
+
     }
 
     .partnership{

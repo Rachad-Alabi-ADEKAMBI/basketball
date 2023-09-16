@@ -91,7 +91,7 @@ html, body {
 .app .contact__items__item {
   width: 340px;
   height: 150px;
-  background-color: #0D0D0D;
+  background-color: #201919;
   border-radius: 5px;
   text-align: center;
   margin: auto;
@@ -139,7 +139,7 @@ html, body {
 }
 .app .news__content .new {
   border-radius: 15px;
-  background-color: #0D0D0D;
+  background-color: #201919;
   display: block;
   flex: 1;
   margin: 10px;
@@ -173,6 +173,79 @@ html, body {
   color: #FDE635;
   cursor: pointer;
 }
+.app .platform {
+  display: block;
+  width: 90%;
+  height: auto;
+  border: 1px #201919 solid;
+  border-radius: 15px;
+  padding: 10px;
+  background-color: #201919;
+  margin: 30px auto;
+}
+.app .platform .subtitle {
+  color: white;
+  margin: 15px auto;
+}
+.app .platform__content {
+  display: block;
+  margin: 15px auto;
+}
+.app .platform__content__top {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 10px auto;
+}
+.app .platform__content__top .title {
+  color: white;
+  flex: 1;
+  background-color: #22242b;
+  cursor: pointer;
+  text-align: center;
+  height: 60px;
+  border-radius: 10px;
+  display: table;
+}
+.app .platform__content__top .title p {
+  vertical-align: middle;
+  margin: 20px auto;
+}
+.app .platform__content__top .title:hover {
+  background-color: #FDE635;
+  color: #201919;
+  transition: 500ms ease-in-out;
+  font-weight: bold;
+}
+.app .platform__content__main .box {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.app .platform__content__main .box__text {
+  display: block;
+  color: white;
+  flex: 1;
+  text-align: left;
+  padding-right: 15px;
+}
+.app .platform__content__main .box__text h4 {
+  font-size: 1.5em;
+}
+.app .platform__content__main .box__text p {
+  margin: 15px auto;
+}
+.app .platform__content__main .box__image {
+  flex: 1;
+}
+.app .platform__content__main .box__image img {
+  width: 95%;
+  height: auto;
+  border-radius: 15px;
+  margin: auto;
+}
 .app .partnership {
   width: 80%;
   display: flex;
@@ -180,7 +253,7 @@ html, body {
   justify-content: space-between;
   flex-wrap: wrap;
   border-radius: 30px;
-  background-color: #0D0D0D;
+  background-color: #201919;
   margin: 40px auto;
   padding-top: 30px;
   padding-bottom: 20px;
@@ -212,7 +285,7 @@ html, body {
   flex-direction: row;
   justify-content: space-between;
   flex-wrap: wrap;
-  background-color: #0D0D0D;
+  background-color: #201919;
   padding: 5px;
   padding-top: 10px;
 }
