@@ -29,66 +29,72 @@ html, body {
   font-size: 1.1em;
 }
 
-.header .logo {
+.content {
+  display: block;
+  position: relative;
+}
+.content .header .logo {
   width: 150px;
   height: auto;
 }
-
-.app .hero {
+.content .app .hero {
   height: 80vh;
   width: 100%;
   background-image: linear-gradient(to bottom, rgba(209, 211, 96, 0.52), rgba(7, 75, 1, 0.73)), url("/images/hero.jpg");
   position: relative;
 }
-.app .hero__text {
+.content .app .hero__text {
   position: absolute;
   margin: 80px auto auto 50%;
   color: white;
   display: block;
 }
-.app .hero__text p {
+.content .app .hero__text p {
   font-size: 1.5em;
 }
-.app .hero__text h1 {
+.content .app .hero__text h1 {
   color: #FDE635;
   font-size: 3em;
   font-weight: bold;
   margin: 50px auto;
 }
-.app .hero__text span {
+.content .app .hero__text span {
   font-size: 1.2em;
   margin: 40px auto;
 }
-.app .hero__text .btn {
+.content .app .hero__text .btn {
   margin: 30px auto;
 }
-.app .clubs {
+.content .app .clubs {
   text-align: center;
   margin: 15px auto;
+  display: block;
 }
-.app .clubs ul {
-  width: 100%;
+.content .app .clubs__content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 90%;
+  margin: 15px auto;
 }
-.app .clubs ul li {
-  display: inline;
-}
-.app .clubs ul li img {
-  width: 150px;
+.content .app .clubs__content .club img {
+  width: 120px;
   height: auto;
-  margin: auto;
+  margin: 10px;
 }
-.app .contact {
+.content .app .contact {
   width: 90%;
   margin: auto auto 30px auto;
   text-align: center;
 }
-.app .contact__items {
+.content .app .contact__items {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   flex-wrap: wrap;
 }
-.app .contact__items__item {
+.content .app .contact__items__item {
   width: 340px;
   height: 150px;
   background-color: #201919;
@@ -97,39 +103,60 @@ html, body {
   margin: auto;
   padding-top: 30px;
 }
-.app .contact__items__item .icone {
+.content .app .contact__items__item .icone {
   color: #FDE635;
 }
-.app .contact__items__item .infos {
+.content .app .contact__items__item .infos {
   color: white;
 }
-.app .contact__items__item .infos span {
+.content .app .contact__items__item .infos span {
   color: #FDE635;
   font-size: 1.5em;
 }
-.app .dashboard {
+.content .app .dashboard {
   display: block;
 }
-.app .dashboard__top {
+.content .app .dashboard__top {
   text-align: center;
-  padding-top: 20px;
 }
-.app .dashboard__top ul {
+.content .app .dashboard__top ul {
   width: 50%;
-  margin: auto;
+  margin: 15px auto;
 }
-.app .dashboard__top ul li {
+.content .app .dashboard__top ul li {
   margin: 15px;
   display: inline;
 }
-.app .dashboard__content {
-  min-height: 60vh;
-  height: 60vh;
-}
-.app .news {
+.content .app .dashboard__content {
+  min-height: 80vh;
+  height: auto;
   display: block;
 }
-.app .news__content {
+.content .app .dashboard__content .games {
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 30px auto;
+}
+.content .app .dashboard__content .games .game {
+  width: 360px;
+  height: 220px;
+  border: 10px;
+  background-color: #22242b;
+  display: block;
+  padding-top: 20px;
+  color: white;
+  cursor: pointer;
+  border-radius: 15px;
+  margin: 10px;
+}
+.content .app .dashboard__content .games .game__date {
+  text-align: center;
+  margin: 10px auto;
+}
+.content .app .dashboard__content .games .game__teams {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -137,7 +164,29 @@ html, body {
   width: 90%;
   margin: auto;
 }
-.app .news__content .new {
+.content .app .dashboard__content .games .game__teams .team {
+  font-weight: bold;
+}
+.content .app .dashboard__content .games .game__teams .team img {
+  width: 60px;
+  margin: auto;
+}
+.content .app .dashboard__content .games .game__stadium {
+  text-align: center;
+  margin: 5px auto 5px auto;
+}
+.content .app .news {
+  display: block;
+}
+.content .app .news__content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 90%;
+  margin: auto;
+}
+.content .app .news__content .new {
   border-radius: 15px;
   background-color: #201919;
   display: block;
@@ -146,34 +195,34 @@ html, body {
   color: white;
   padding: 30px;
 }
-.app .news__content .new h4 {
+.content .app .news__content .new h4 {
   color: #FDE635;
   font-weight: bold;
 }
-.app .news__content .new__image img {
+.content .app .news__content .new__image img {
   border-radius: 10px;
 }
-.app .news__content .new__date {
+.content .app .news__content .new__date {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   flex-wrap: wrap;
 }
-.app .news__content .new__date .date i {
+.content .app .news__content .new__date .date i {
   color: white;
 }
-.app .news__content .new__date .likes .like {
+.content .app .news__content .new__date .likes .like {
   color: #FDE635;
   margin: 10px;
 }
-.app .news__content .new__date .likes .dislike {
+.content .app .news__content .new__date .likes .dislike {
   color: #7E57C2;
 }
-.app .news__content .new__link {
+.content .app .news__content .new__link {
   color: #FDE635;
   cursor: pointer;
 }
-.app .platform {
+.content .app .platform {
   display: block;
   width: 90%;
   height: auto;
@@ -183,22 +232,22 @@ html, body {
   background-color: #201919;
   margin: 30px auto;
 }
-.app .platform .subtitle {
+.content .app .platform .subtitle {
   color: white;
   margin: 15px auto;
 }
-.app .platform__content {
+.content .app .platform__content {
   display: block;
   margin: 15px auto;
 }
-.app .platform__content__top {
+.content .app .platform__content__top {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   flex-wrap: wrap;
   margin: 10px auto;
 }
-.app .platform__content__top .title {
+.content .app .platform__content__top .title {
   color: white;
   flex: 1;
   background-color: #22242b;
@@ -208,45 +257,45 @@ html, body {
   border-radius: 10px;
   display: table;
 }
-.app .platform__content__top .title p {
+.content .app .platform__content__top .title p {
   vertical-align: middle;
   margin: 20px auto;
 }
-.app .platform__content__top .title:hover {
+.content .app .platform__content__top .title:hover {
   background-color: #FDE635;
   color: #201919;
   transition: 500ms ease-in-out;
   font-weight: bold;
 }
-.app .platform__content__main .box {
+.content .app .platform__content__main .box {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   flex-wrap: wrap;
 }
-.app .platform__content__main .box__text {
+.content .app .platform__content__main .box__text {
   display: block;
   color: white;
   flex: 1;
   text-align: left;
   padding-right: 15px;
 }
-.app .platform__content__main .box__text h4 {
+.content .app .platform__content__main .box__text h4 {
   font-size: 1.5em;
 }
-.app .platform__content__main .box__text p {
+.content .app .platform__content__main .box__text p {
   margin: 15px auto;
 }
-.app .platform__content__main .box__image {
+.content .app .platform__content__main .box__image {
   flex: 1;
 }
-.app .platform__content__main .box__image img {
+.content .app .platform__content__main .box__image img {
   width: 95%;
   height: auto;
   border-radius: 15px;
   margin: auto;
 }
-.app .partnership {
+.content .app .partnership {
   width: 80%;
   display: flex;
   flex-direction: row;
@@ -258,29 +307,28 @@ html, body {
   padding-top: 30px;
   padding-bottom: 20px;
 }
-.app .partnership__image {
+.content .app .partnership__image {
   width: 170px;
   height: 170px;
   border-radius: 60px;
   margin: 90px 30px auto 40px;
 }
-.app .partnership__text {
+.content .app .partnership__text {
   flex: 1;
   display: block;
   color: white;
   margin: 20px auto;
   padding-left: 30px;
 }
-.app .partnership__text h4 {
+.content .app .partnership__text h4 {
   color: #FDE635;
   font-size: 2em;
 }
-.app .partnership .btn {
+.content .app .partnership .btn {
   border-radius: 10px;
   margin: 20px auto;
 }
-
-.footer {
+.content .footer {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -288,30 +336,31 @@ html, body {
   background-color: #201919;
   padding: 5px;
   padding-top: 10px;
+  bottom: 0;
 }
-.footer__infos {
+.content .footer__infos {
   flex: 1;
 }
-.footer__infos span {
+.content .footer__infos span {
   color: white;
   width: 70%;
   text-align: left;
   margin: auto 0;
 }
-.footer__menu {
+.content .footer__menu {
   flex: 1;
 }
-.footer__menu h4 {
+.content .footer__menu h4 {
   color: #FDE635;
   font-size: 1.6em;
 }
-.footer__menu ul li {
+.content .footer__menu ul li {
   display: block;
 }
-.footer__menu ul li a {
+.content .footer__menu ul li a {
   color: white;
   cursor: pointer;
 }
-.footer__menu ul li a:hover {
+.content .footer__menu ul li a:hover {
   font-weight: bold;
 }/*# sourceMappingURL=main.css.map */

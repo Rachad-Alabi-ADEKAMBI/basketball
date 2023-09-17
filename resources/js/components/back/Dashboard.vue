@@ -9,9 +9,9 @@
                     </li>
 
                     <li>
-                        <button class="btn btn-secondary">
-                            My games
-                        </button>
+                        <a class="btn btn-secondary" href="games">
+                            Games
+                        </a>
                     </li>
                 </ul>
             </div>

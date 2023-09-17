@@ -48,6 +48,12 @@ Route::get('/dashboard', function () {
     ->middleware(['auth', 'verified'])
     ->name('dashboard');
 
+Route::get('/games', function () {
+    return view('/pages/back/games');
+})
+    ->middleware(['auth', 'verified'])
+    ->name('games');
+
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name(
         'profile.edit'

@@ -26,12 +26,11 @@
                         Clubs
                     </h2> <br>
 
-                    <ul>
-                        <li v-for="game in apiResult.response" :key="game.id">
-                            <p>{{ game.name   }}</p>
-                            <p>{{ game.type   }}</p>
-                        </li>
-                    </ul>
+                    <div class="clubs__content">
+                        <div class="club" v-for="club in apiResult.response" :key="club.id">
+                            <img :src="getImgUrl(club.flag)" alt="">
+                        </div>
+                    </div>
                 </div>
 
                 <div class="platform">
@@ -272,24 +271,27 @@ mounted: function() {
 },
 methods: {
     getGames() {
-    var myHeaders = new Headers();
-    myHeaders.append("x-rapidapi-key", "71d95ba09f4094fa6f5f291f089cb27b");
-    myHeaders.append("x-rapidapi-host", "v1.basketball.api-sports.io/leagues");
+      var currentDate = new Date();
+      var formattedDate = currentDate.toISOString().split('T')[0]; // Formats the date as 'yyyy-mm-dd'
 
-    var requestOptions = {
+      var myHeaders = new Headers();
+      myHeaders.append("x-rapidapi-key", "71d95ba09f4094fa6f5f291f089cb27b");
+      myHeaders.append("x-rapidapi-host", "v1.basketball.api-sports.io/countries");
+
+      var requestOptions = {
         method: 'GET',
         headers: myHeaders,
         redirect: 'follow'
-    };
+      };
 
-    fetch("https://v1.basketball.api-sports.io/leagues", requestOptions)
-        .then(response => response.json()) // Use response.json() to parse JSON data
+      fetch("https://v1.basketball.api-sports.io/countries", requestOptions)
+        .then(response => response.json())
         .then(result => {
-            console.log(result)
-            this.apiResult = result;
+          console.log(result)
+          this.apiResult = result;
         })
         .catch(error => {
-            console.log('error', error);
+          console.log('error', error);
         });
     },
     displayBox1(){
@@ -337,7 +339,7 @@ methods: {
     return res;
 },
     getImgUrl(pic) {
-    return "http://cruspherbasketball/public/img/" + pic;
+    return  pic;
 },
 viewArticle(id){
     window.location.replace('/article/'+id)
