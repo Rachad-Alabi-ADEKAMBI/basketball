@@ -80,6 +80,7 @@ html, body {
 }
 .content .app .clubs__content .club img {
   width: 120px;
+  border-radius: 50px;
   height: auto;
   margin: 10px;
 }

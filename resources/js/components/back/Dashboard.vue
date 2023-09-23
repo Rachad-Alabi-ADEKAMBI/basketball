@@ -18,10 +18,10 @@
 
             <div class="dashboard__content">
                 <ul>
-        <li v-for="game in details" :key="game.id">
-          <h2>{{ game.id }}</h2>
-        </li>
-      </ul>
+                    <li v-for="game in details" :key="game.id">
+                    <h2>{{ game.id }}</h2>
+                    </li>
+                </ul>
             </div>
         </div>
 </template>

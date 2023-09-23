@@ -180,6 +180,45 @@
                     </div>
                 </div>
 
+                  <div class="news">
+                    <h2 class="subtitle">
+                        Basketball news
+                    </h2>
+
+                    <div class="news__content">
+                        <div class=" card new" v-for="detail in news" :key="detail.id">
+                            <h4>
+                                {{  detail.title  }}
+                            </h4>
+
+                            <div class="new__date">
+                                <div class="date">
+                                    <i class="fa-regular fa-clock"></i> {{ detail.date }}
+                                </div>
+
+                                <div class="likes">
+                                    <i class="fa-regular like fa-thumbs-up"></i>
+                                    <i class="fa-regular   dislike fa-thumbs-up"></i>
+                                </div>
+                            </div>
+
+                            <div class="new__image">
+                                <img :src="detail.image" />
+                            </div>
+
+                            <div class="new__text">
+                                <p>
+                                    {{ detail.preview }}
+                                </p>
+                            </div>
+
+                            <div class="new__link" @click="(viewArticle(detail.id))">
+                                Read more ...
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
                 <div class="contact">
                     <h2 class="subtitle">
                         Contact Us
@@ -276,7 +315,7 @@ methods: {
 
       var myHeaders = new Headers();
       myHeaders.append("x-rapidapi-key", "71d95ba09f4094fa6f5f291f089cb27b");
-      myHeaders.append("x-rapidapi-host", "v1.basketball.api-sports.io/countries");
+      myHeaders.append("x-rapidapi-host", "v1.basketball.api-sports.io/teams?country_id=106");
 
       var requestOptions = {
         method: 'GET',
@@ -284,7 +323,7 @@ methods: {
         redirect: 'follow'
       };
 
-      fetch("https://v1.basketball.api-sports.io/countries", requestOptions)
+      fetch("https://v1.basketball.api-sports.io/teams?country_id=106", requestOptions)
         .then(response => response.json())
         .then(result => {
           console.log(result)
