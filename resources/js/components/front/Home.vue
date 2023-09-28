@@ -326,7 +326,7 @@ methods: {
       fetch("https://v1.basketball.api-sports.io/teams?country_id=106", requestOptions)
         .then(response => response.json())
         .then(result => {
-          console.log(result)
+        //  console.log(result)
           this.apiResult = result;
         })
         .catch(error => {
