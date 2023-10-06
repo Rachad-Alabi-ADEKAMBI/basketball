@@ -2,7 +2,7 @@
 
     <div class="news">
         <h2 class="subtitle">
-            News
+          Clubs
         </h2>
 
         <div class="news__content">
