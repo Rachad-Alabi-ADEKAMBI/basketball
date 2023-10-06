@@ -7,11 +7,16 @@
 .btn-secondary {
   background-color: #7E57C2;
   border: 1px #7E57C2 solid;
-  color: black;
+  color: white;
+  transition: 500ms ease-in-out;
 }
 
 .btn-primary:hover {
-  background-color: #7E57C2;
+  transform: scale(1.1);
+}
+
+.btn-secondary:hover {
+  transform: scale(1.1);
 }
 
 .subtitle {
@@ -19,6 +24,7 @@
   font-weight: bold;
   margin: auto;
   text-align: center;
+  color: white;
 }
 
 html, body {
@@ -32,15 +38,17 @@ html, body {
 .content {
   display: block;
   position: relative;
+  background: #201919;
+  color: white;
 }
 .content .header .logo {
   width: 150px;
   height: auto;
 }
 .content .app .hero {
-  height: 80vh;
+  height: 90vh;
   width: 100%;
-  background-image: linear-gradient(to bottom, rgba(209, 211, 96, 0.52), rgba(7, 75, 1, 0.73)), url("/images/hero.jpg");
+  background-image: linear-gradient(to bottom, rgba(209, 211, 96, 0.52), rgba(41, 43, 41, 0.73)), url("/images/hero.jpg");
   position: relative;
 }
 .content .app .hero__text {
@@ -77,6 +85,9 @@ html, body {
   flex-wrap: wrap;
   width: 90%;
   margin: 15px auto;
+}
+.content .app .clubs__content .club {
+  cursor: pointer;
 }
 .content .app .clubs__content .club img {
   width: 120px;
@@ -364,4 +375,6 @@ html, body {
 }
 .content .footer__menu ul li a:hover {
   font-weight: bold;
-}/*# sourceMappingURL=main.css.map */
+}
+
+/*responsive*//*# sourceMappingURL=main.css.map */

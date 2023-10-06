@@ -15,7 +15,7 @@
                                 </span> <br>
 
 
-                            <a href="" class="btn btn-primary">
+                            <a href="" class="btn btn-secondary">
                                 Interactive game
                             </a>
                         </div>
@@ -23,12 +23,13 @@
 
                 <div class="clubs">
                     <h2 class="subtitle">
-                        Clubs
+                        Leagues/Clubs
                     </h2> <br>
 
                     <div class="clubs__content">
-                        <div class="club" v-for="club in apiResult.response" :key="club.id">
-                            <img :src="getImgUrl(club.flag)" alt="">
+                        <div class="club" v-for="league in apiResult.response" :key="league.id">
+                            <img :src="getImgUrl(league.logo)" alt="">
+                            <p>{{ league.name }}</p>
                         </div>
                     </div>
                 </div>
@@ -329,7 +330,7 @@ methods: {
 
       var myHeaders = new Headers();
       myHeaders.append("x-rapidapi-key", "71d95ba09f4094fa6f5f291f089cb27b");
-      myHeaders.append("x-rapidapi-host", "v1.basketball.api-sports.io/leagues?country_id=106&date=" + formattedDate);
+      myHeaders.append("x-rapidapi-host", "v1.basketball.api-sports.io/leagues?country=ukraine");
 
       var requestOptions = {
         method: 'GET',
@@ -337,7 +338,7 @@ methods: {
         redirect: 'follow'
       };
 
-      fetch("https://v1.basketball.api-sports.io/leagues?country_id=106&date=" + formattedDate, requestOptions)
+      fetch("https://v1.basketball.api-sports.io/leagues?country=ukraine", requestOptions)
         .then(response => response.json())
         .then(result => {
           console.log(result)
