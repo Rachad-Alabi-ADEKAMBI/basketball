@@ -28,11 +28,12 @@
 }
 
 html, body {
-  font-family: montserrat, sans-serif;
   padding: 0;
   margin: 0;
   box-sizing: border-box;
   font-size: 1.1em;
+  font-family: "Montserrat";
+  font-size: 22px;
 }
 
 .content {
@@ -97,7 +98,7 @@ html, body {
 }
 .content .app .contact {
   width: 90%;
-  margin: auto auto 30px auto;
+  margin: 20px auto 30px auto;
   text-align: center;
 }
 .content .app .contact__items {
@@ -105,11 +106,12 @@ html, body {
   flex-direction: row;
   justify-content: space-between;
   flex-wrap: wrap;
+  margin: 15px auto;
 }
 .content .app .contact__items__item {
   width: 340px;
   height: 150px;
-  background-color: #201919;
+  background-color: #22242b;
   border-radius: 5px;
   text-align: center;
   margin: auto;
@@ -200,7 +202,7 @@ html, body {
 }
 .content .app .news__content .new {
   border-radius: 15px;
-  background-color: #201919;
+  background-color: #22242b;
   display: block;
   flex: 1;
   margin: 10px;
@@ -279,11 +281,15 @@ html, body {
   transition: 500ms ease-in-out;
   font-weight: bold;
 }
+.content .app .platform__content__main {
+  margin: 20px auto;
+}
 .content .app .platform__content__main .box {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   flex-wrap: wrap;
+  margin: 15px auto;
 }
 .content .app .platform__content__main .box__text {
   display: block;
@@ -377,4 +383,131 @@ html, body {
   font-weight: bold;
 }
 
-/*responsive*//*# sourceMappingURL=main.css.map */
+@media (min-width: 1024px) and (max-width: 1279px) {
+  .content .app .hero {
+    height: 60vh;
+  }
+  .content .app .partnership {
+    flex-direction: column;
+  }
+  .content .app .partnership__image {
+    text-align: center;
+    margin: auto;
+    width: 250px;
+    height: 250px;
+    border-radius: 90px;
+  }
+  .content .app .contact__items {
+    flex-direction: column;
+  }
+  .content .app .contact__items__item {
+    margin: 15px auto;
+    width: 400px;
+  }
+}
+@media (min-width: 550px) and (max-width: 1023px) {
+  .content .app .hero {
+    height: 60vh;
+  }
+  .content .app .hero__text {
+    margin: 50px auto;
+    padding: 10px;
+  }
+  .content .app .news__content {
+    flex-direction: column;
+  }
+  .content .app .partnership {
+    flex-direction: column;
+  }
+  .content .app .partnership__image {
+    text-align: center;
+    margin: auto;
+    width: 250px;
+    height: 250px;
+    border-radius: 90px;
+  }
+  .content .app .platform__content__main .box {
+    flex-direction: column;
+  }
+  .content .app .contact__items {
+    flex-direction: column;
+  }
+  .content .app .contact__items__item {
+    margin: 15px auto;
+    width: 400px;
+  }
+  .content .footer {
+    flex-direction: column;
+  }
+  .content .footer__infos {
+    margin: 15px auto;
+  }
+  .content .footer__menu {
+    margin-top: 10px;
+  }
+}
+@media (min-width: 350px) and (max-width: 549px) {
+  .subtitle {
+    font-size: 1.7em;
+  }
+  .content .app .hero {
+    height: 60vh;
+  }
+  .content .app .hero__text {
+    margin: 50px auto;
+    padding: 10px;
+  }
+  .content .app .hero__text h1 {
+    font-size: 2.5em;
+  }
+  .content .app .clubs__content {
+    flex-direction: column;
+  }
+  .content .app .clubs__content .club {
+    text-align: center;
+  }
+  .content .app .clubs__content .club img {
+    margin: auto;
+  }
+  .content .app .news__content {
+    flex-direction: column;
+  }
+  .content .app .news__content .new {
+    width: 90%;
+    margin: 10px auto;
+    padding: 10px;
+  }
+  .content .app .partnership {
+    flex-direction: column;
+  }
+  .content .app .partnership__image {
+    text-align: center;
+    margin: auto;
+    width: 250px;
+    height: 250px;
+    border-radius: 90px;
+  }
+  .content .app .platform__content__main .box {
+    flex-direction: column;
+  }
+  .content .app .contact__items {
+    flex-direction: column;
+    text-align: center;
+  }
+  .content .app .contact__items__item {
+    margin: 15px auto;
+    width: 310px;
+  }
+  .content .app .contact__items__item .infos span {
+    font-size: 1.1em;
+  }
+  .content .footer {
+    flex-direction: column;
+  }
+  .content .footer__infos {
+    margin: 15px auto;
+  }
+  .content .footer__menu {
+    margin-top: 10px;
+  }
+}/*# sourceMappingURL=main.css.map */

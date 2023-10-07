@@ -1,7 +1,7 @@
 <template>
 
                 <div class="hero">
-                        <div class="hero__text">
+                        <div class="hero__text animate__animated animate__backInDown">
                             <p>
                                 Digital platform
                             </p>
@@ -21,7 +21,7 @@
                         </div>
                 </div>
 
-                <div class="clubs">
+                <div class="clubs" id='clubs'>
                     <h2 class="subtitle">
                         Leagues/Clubs
                     </h2> <br>
@@ -42,7 +42,7 @@
                     <div class="platform__content">
                         <div class="platform__content__top">
                             <div class="title" @click="displayBox1()" :style="title1">
-                                <p>Idea</p>
+                                <p>The idea</p>
                             </div>
 
                              <div class="title" @click="displayBox2()" :style="title2">
@@ -67,7 +67,6 @@
                                     <p>
                                         product aimed at satisfying the needs of basketball fans. We have successfully merged real basketball events with an immersive virtual world, creating a platform that brings together basketball enthusiasts of different nationalities, regardless of their location. <br><br>
                                         Our platform, Cruspher, not only provides the opportunity to access match statistics of your favorite basketball club at any time but also allows engaging in virtual betting on basketball games. It's a basketball gaming experience that helps fans generate new emotions and impressions without leaving their homes <br><br>
-                                        We understand the importance of match statistics for basketball fans. That's why Cruspher offers detailed match statistics and latest basketball news ensuring you're always up to date with the latest events and able to make informed decisions during the game and virtual betting.
 
                                     </p>
                                 </div>
@@ -123,13 +122,13 @@
                     </div>
                 </div>
 
-                <div class="news">
+                <div class="news" id='news'>
                     <h2 class="subtitle">
                         News
                     </h2>
 
                     <div class="news__content">
-                        <div class=" card new" v-for="detail in news" :key="detail.id">
+                        <div class=" card new animate__animated animate__backInDown" v-for="detail in news" :key="detail.id">
                             <h4>
                                 {{  detail.title  }}
                             </h4>

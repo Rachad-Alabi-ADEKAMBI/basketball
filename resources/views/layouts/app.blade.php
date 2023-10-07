@@ -25,6 +25,7 @@
     <meta name="robots" content='index, follow'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
 
 
     <!-- Styles -->
@@ -70,10 +71,9 @@
                     Links
                 </h4>
                 <ul>
-                    <li><a href="">Clubs</a></li>
-                    <li><a href="">Shop</a></li>
+                    <li><a href="#clubs">Clubs</a></li>
                     <li><a href="">Fans tokens</a></li>
-                    <li><a href="">Cryptos news</a></li>
+                    <li><a href="#news">Cryptos news</a></li>
                 </ul>
             </div>
 
@@ -82,7 +82,7 @@
                     About us
                 </h4>
                 <ul>
-                    <li><a href="">Register</a></li>
+                    <li><a href="/register">Register</a></li>
                     <li><a href="">Partnership</a></li>
                     <li><a href="">Terms of use</a></li>
                     <li><a href="">Privacy policy</a></li>
